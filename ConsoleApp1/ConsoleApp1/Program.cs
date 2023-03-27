@@ -67,4 +67,3 @@ Console.WriteLine("Cyfry 6 jest" + counter6);
 Console.WriteLine("Cyfry 7 jest" + counter7);
 Console.WriteLine("Cyfry 8 jest" + counter8);
 Console.WriteLine("Cyfry 9 jest" + counter9);
-Console.ReadKey();
