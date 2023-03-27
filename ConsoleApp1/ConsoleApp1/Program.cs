@@ -1,4 +1,4 @@
-﻿int number = 454669;
+int number = 454669;
 string numberAsString = number.ToString();
 char[] letters = numberAsString.ToArray();
 Console.WriteLine("W numerze są cyfry:");
