@@ -1,14 +1,15 @@
 ﻿namespace ConsoleApp1
+
 {
-    public class Employee1
+    public class Employee
     {
         public List<float> grades = new List<float>();
-        public Employee1(string name, string surname)
+        public Employee(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
         }
-         
+
         public string Name { get; private set; }
         public string Surname { get; private set; }
 
@@ -16,15 +17,14 @@
         {
             this.grades.Add(grade);
         }
-
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
             statistics.Average = 0;
-            statistics.Max = float.MinValue;
-            statistics.Min= float.MaxValue;
+            statistics.Max = int.MinValue;
+            statistics.Min = int.MaxValue;
 
-            foreach(var grade in this.grades)
+            foreach (var grade in this.grades)
             {
                 statistics.Max = Math.Max(statistics.Max, grade);
                 statistics.Min = Math.Min(statistics.Min, grade);

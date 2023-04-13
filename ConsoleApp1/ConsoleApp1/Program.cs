@@ -1,6 +1,6 @@
 using ConsoleApp1;
 
-var employee = new Employee1("Piotr", "Warchoł");
+var employee = new Employee("Piotr", "Warchoł");
 employee.AddGrade(2);
 employee.AddGrade(5);
 employee.AddGrade(4);
