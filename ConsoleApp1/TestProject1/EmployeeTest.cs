@@ -8,6 +8,7 @@ namespace ConsoleApp1
         {
             // arrange
             var employee = new Employee("Piotr", "Warcho³");
+
             employee.AddGrade(6);
             employee.AddGrade(4);
             employee.AddGrade(2);
