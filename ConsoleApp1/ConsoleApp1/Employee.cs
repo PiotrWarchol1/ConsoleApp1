@@ -1,5 +1,4 @@
-﻿using ConsoleApp1;
-namespace ConsoleApp1
+﻿namespace ConsoleApp1
 
 {
     public class Employee
@@ -11,19 +10,56 @@ namespace ConsoleApp1
             this.Surname = surname;
         }
 
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
+        private string Name { get; set; }
+        private string Surname { get; set; }
 
         public void AddGrade(float grade)
+
         {
-            this.grades.Add(grade);
+            //3.33
+            //3
+
+            int valueInInt = (int)grade;
+
+            if (grade >= 0 && grade <= 100)
+            {
+                this.grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("invalid grade value");
+            }
         }
-        public Statistics GetStatistics()
+        public void AddGrade(double grade)
+
+        {
+            float gradeAsFloat = (float)grade;
+            this.AddGrade(gradeAsFloat);
+        }
+    
+        public void AddGrade(long grade)
+        {
+            float gradeIsFloat = (long)grade;
+            this.AddGrade(gradeIsFloat);
+        }
+        public void AddGrade(string grade)
+        {
+            if(float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else
+            {
+                Console.WriteLine("String in not floaat");
+            }
+            
+        }
+            public Statistics GetStatistics()
         {
             var statistics = new Statistics();
             statistics.Average = 0;
-            statistics.Max = int.MinValue;
-            statistics.Min = int.MaxValue;
+            statistics.Max = float.MinValue;
+            statistics.Min = float.MaxValue;
 
             foreach (var grade in this.grades)
             {
@@ -37,5 +73,6 @@ namespace ConsoleApp1
 
             return statistics;
         }
-    }
+
+    }    
 }
