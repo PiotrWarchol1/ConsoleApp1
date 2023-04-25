@@ -6,9 +6,10 @@ namespace ConsoleApp1
     public class Employee
     {
         public List<float> grades = new List<float>();
-        public Employee()
+        public Employee(string name, string surname)
         {
-
+            this.Name = name;
+            this.Surname = surname;
         }
 
         private string Name { get; set; }
@@ -71,7 +72,7 @@ namespace ConsoleApp1
             }
             else
             {
-                Console.WriteLine("String in not floaat");
+                throw new Exception("String in not floaat");
             }
 
         }
