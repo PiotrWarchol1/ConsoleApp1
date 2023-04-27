@@ -3,17 +3,20 @@
 namespace ConsoleApp1
 
 {
-    public class Employee
+    public class Employee : Person
     {
         public List<float> grades = new List<float>();
-        public Employee(string name, string surname)
+        public Employee(string name, string surname, int age)
+            : base (name, surname, age)
         {
             this.Name = name;
             this.Surname = surname;
+            this.Age = age;
         }
 
-        private string Name { get; set; }
-        private string Surname { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Age { get; set; }
 
         public void AddGrade(float grade)
 
@@ -26,7 +29,7 @@ namespace ConsoleApp1
             }
             else
             {
-                Console.WriteLine("invalid grade value");
+                throw new Exception("invalid grade value");
             }
         }
         public void AddGrade(double grade)
