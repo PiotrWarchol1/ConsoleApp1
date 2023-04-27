@@ -2,7 +2,7 @@
 
 namespace ConsoleApp1
 
-{
+{ 
     public class Employee : Person
     {
         public List<float> grades = new List<float>();
