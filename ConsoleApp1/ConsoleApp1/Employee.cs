@@ -1,22 +1,18 @@
 ﻿using System;
-
 namespace ConsoleApp1
 
 { 
-    public class Employee : Person
+    public class Employee : IEmployee
     {
-        public List<float> grades = new List<float>();
-        public Employee(string name, string surname, int age)
-            : base (name, surname, age)
+        private List<float> grades = new List<float>();
+        public Employee(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
-            this.Age = age;
         }
 
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
 
         public void AddGrade(float grade)
 
@@ -79,6 +75,12 @@ namespace ConsoleApp1
             }
 
         }
+
+        public void AddGrade(int grade)
+        {
+            throw new NotImplementedException();
+        }
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
