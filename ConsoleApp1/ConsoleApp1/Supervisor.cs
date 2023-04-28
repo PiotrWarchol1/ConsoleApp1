@@ -14,22 +14,26 @@
 
         public void AddGrade(float grade)
         {
-            throw new NotImplementedException();
+            var gradesAsFloat = (float)grade;
+            grades.Add(gradesAsFloat);
         }
 
         public void AddGrade(double grade)
         {
-            throw new NotImplementedException();
+            var gradesAsFloat = (float)grade;
+            grades.Add(gradesAsFloat);
         }
 
         public void AddGrade(int grade)
         {
-            throw new NotImplementedException();
+            var gradesAsFloat = (float)grade;
+            grades.Add(gradesAsFloat);
         }
 
         public void AddGrade(char grade)
         {
-            throw new NotImplementedException();
+            var gradesAsFloat = (float)grade;
+            grades.Add(gradesAsFloat);
         }
 
         public void AddGrade(string grade)
