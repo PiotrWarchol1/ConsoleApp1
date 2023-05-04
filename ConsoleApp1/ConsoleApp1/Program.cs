@@ -3,7 +3,7 @@ using ConsoleApp1;
 Console.WriteLine("Witamy w Programie XYZ do oceny pracowników");
 Console.WriteLine("===========================================");
 Console.WriteLine();
-
+ 
 var employee = new EmployeeInFile("Piotr", "Warchoł");
 employee.AddGrade(34.0f);
 employee.AddGrade('1');

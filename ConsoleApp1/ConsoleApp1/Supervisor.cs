@@ -1,5 +1,5 @@
 ﻿namespace ConsoleApp1
-{
+{ 
     public class Supervisor : IEmployee
     {
         private List<float> grades = new List<float>();

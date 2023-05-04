@@ -1,7 +1,7 @@
 ﻿namespace ConsoleApp1
 {
     public abstract class Person  
-    {
+    { 
         public Person(string name,string surname)
         {
             this.Name = name;

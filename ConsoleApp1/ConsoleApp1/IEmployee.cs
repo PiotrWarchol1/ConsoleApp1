@@ -1,7 +1,7 @@
 ﻿namespace ConsoleApp1
 {
     public interface IEmployee
-    {
+    { 
         string Name { get; }
         string Surname { get; }
         void AddGrade(float grade);

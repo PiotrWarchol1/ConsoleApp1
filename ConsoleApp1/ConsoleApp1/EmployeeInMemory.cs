@@ -7,7 +7,7 @@
             : base(name, surname)
         {
         }
-         
+          
         public override void AddGrade(float grade)
         {
             using (var writer = File.AppendText(fileName))

@@ -1,5 +1,5 @@
 ﻿namespace ConsoleApp1
-{    
+{     
     public class Statistics
     { 
         public float Min { get; set; }

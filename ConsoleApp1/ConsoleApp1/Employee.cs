@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ConsoleApp1
 
-{  
+{   
     public class Employee : IEmployee
     {
         private List<float> grades = new List<float>();

@@ -31,7 +31,7 @@
                 writer.WriteLine(grade);
             }
         }  
-
+         
         public override void AddGrade(char grade)
         {
             using (var writer = File.AppendText(fileName))
