@@ -37,7 +37,7 @@
             using (var writer = File.AppendText(fileName))
             {
                 writer.WriteLine(grade);
-            }
+            } 
         }
 
         public override void AddGrade(string grade)

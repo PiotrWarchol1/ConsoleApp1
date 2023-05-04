@@ -8,7 +8,7 @@
             this.Surname = surname;
         } 
         public string Name { get; set; }
-
+         
         public string Surname { get; set; }
 
         public abstract void AddGrade(float grade);

@@ -13,7 +13,7 @@
         {
             using (var writer = File.AppendText(fileName))
             {
-                writer.Write(grade);
+                writer.Write(grade); 
             }
         }
 

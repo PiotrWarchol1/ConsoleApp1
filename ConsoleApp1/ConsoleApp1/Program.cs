@@ -10,7 +10,6 @@ employee.AddGrade('1');
 employee.AddGrade(5);
 employee.AddGrade('w');
 
-
 //while (true)
 //{
     //Console.WriteLine("Podaj kolejną ocenę pracownika: ");
