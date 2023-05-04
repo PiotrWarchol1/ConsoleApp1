@@ -30,7 +30,7 @@
             {
                 writer.WriteLine(grade);
             }
-        }
+        } 
 
         public override void AddGrade(char grade)
         {
