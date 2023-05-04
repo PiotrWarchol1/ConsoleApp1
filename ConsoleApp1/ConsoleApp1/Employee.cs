@@ -119,5 +119,10 @@ namespace ConsoleApp1
 
             return statistics;
         }
+
+        internal void SayHallo()
+        {
+            throw new NotImplementedException();
+        }
     }    
 }
