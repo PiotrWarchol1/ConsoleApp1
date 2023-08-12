@@ -42,9 +42,11 @@
 
         public override void AddGrade(string grade)
         {
-            throw new NotImplementedException();
+            using (var writer = File.AppendText(fileName))
+            {
+                writer.WriteLine(grade);
+            }
         }
-
         public override Statistics GetStatistics()
         {
             var gradesFromFile = this.ReadGradesFromFile();
