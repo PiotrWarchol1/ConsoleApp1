@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    public class EmployeeInFile : EmployeeBase
+    public class EmployeeInFile : EmployeeBase 
     {
         private const string fileName = "grades.txt";
         public EmployeeInFile(string name, string surname) 

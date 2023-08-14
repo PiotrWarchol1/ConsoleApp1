@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {     
-    public class Statistics
+    public class Statistics 
     { 
         public float Min { get; set; }
         public float Max { get; set; }

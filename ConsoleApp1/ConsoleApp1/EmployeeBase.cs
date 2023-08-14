@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    public abstract class EmployeeBase : IEmployee
+    public abstract class EmployeeBase : IEmployee 
     {
         public EmployeeBase(string name, string surname)
         {

@@ -2,7 +2,7 @@
 namespace ConsoleApp1
 
 {   
-    public class Employee : IEmployee
+    public class Employee : IEmployee 
     {
         private List<float> grades = new List<float>();
         public Employee(string name, string surname)

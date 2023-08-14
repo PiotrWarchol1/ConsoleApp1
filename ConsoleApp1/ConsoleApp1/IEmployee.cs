@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    public interface IEmployee
+    public interface IEmployee 
     { 
         string Name { get; }
         string Surname { get; }
