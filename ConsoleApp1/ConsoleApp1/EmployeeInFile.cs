@@ -2,6 +2,8 @@
 {
     public class EmployeeInFile : EmployeeBase 
     {
+        public event GradeAddedDelegate GradeAdded;
+
         public const string fileName = "grades.txt";
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
@@ -10,17 +12,23 @@
 
         public override void AddGrade(float grade)
         {
-            using (var writer = File.AppendText(fileName))
+            if (grade >= 0 && grade <= 100)
             {
-                if(grade >= 0 && grade <= 100)
+                using (var writer = File.AppendText(fileName))
                 {
                     writer.WriteLine(grade);
                 }
-                else
+                if (GradeAdded != null)
                 {
-                    throw new Exception("Nie właściwa wartość");
+                   GradeAdded(this, new EventArgs());
                 }
+
             }
+            else
+            {
+                throw new Exception("Nie właściwa wartość");
+            }
+
         }
 
         public override void AddGrade(double grade)

@@ -2,6 +2,8 @@
 {
     public class EmployeeInMemory : EmployeeBase
     {
+        public event GradeAddedDelegate GradeAdded;
+
         public delegate void WriteMessage(string message);
 
         private List<float> grades = new List<float>();
@@ -13,17 +15,19 @@
         }
 
         public override void AddGrade(float grade)
-       {
-            using (var writer = File.AppendText(fileName))
+        {
+            if (grade >= 0 && grade <= 100)
             {
-                if(grade >= 0 && grade <= 100)
+                this.grades.Add(grade);
+
+                if (GradeAdded != null)
                 {
-                    writer.WriteLine(grade);
+                    GradeAdded(this, new EventArgs());
                 }
-                else
-                {
-                    throw new Exception("Nie właściwa wartość");
-                }
+            }
+            else
+            {
+                throw new Exception("Nie właściwa wartość");
             }
         }
 

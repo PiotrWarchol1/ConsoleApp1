@@ -1,7 +1,10 @@
-﻿namespace ConsoleApp1
+﻿using static ConsoleApp1.EmployeeBase;
+
+namespace ConsoleApp1
 {
     public interface IEmployee 
-    { 
+    {
+        event GradeAddedDelegate GradeAdded;
         string Name { get; }
         string Surname { get; } 
         void AddGrade(float grade);
