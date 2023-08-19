@@ -2,7 +2,7 @@
 {
     public class EmployeeInFile : EmployeeBase 
     {
-        private const string fileName = "grades.txt";
+        public const string fileName = "grades.txt";
         public EmployeeInFile(string name, string surname) 
             : base(name, surname)
         {
@@ -12,7 +12,14 @@
         {
             using (var writer = File.AppendText(fileName))
             {
-                writer.WriteLine(grade);
+                if(grade >= 0 && grade <= 100)
+                {
+                    writer.WriteLine(grade);
+                }
+                else
+                {
+                    throw new Exception("Nie właściwa wartość");
+                }
             }
         }
 
@@ -28,9 +35,16 @@
         {
             using (var writer = File.AppendText(fileName))
             {
-                writer.WriteLine(grade);
+                if(grade >= 0 && grade <= 100)
+                {
+                    writer.WriteLine(grade);
+                }
+                else
+                {
+                    throw new Exception("Nie właściwa wartość");
+                }
             }
-        }  
+        } 
          
         public override void AddGrade(char grade)
         {
@@ -42,9 +56,13 @@
 
         public override void AddGrade(string grade)
         {
-            using (var writer = File.AppendText(fileName))
+            if (float.TryParse(grade, out float result))
             {
-                writer.WriteLine(grade);
+                this.AddGrade(result);
+            }
+            else
+            {
+                throw new Exception("Wartość nie jest liczbą");
             }
         }
         public override Statistics GetStatistics()
@@ -63,7 +81,7 @@
                     var line = reader.ReadLine();
                     while (line != null)
                     {
-                        var number = float.Parse(line);
+                        float number = float.Parse(line);
                         grades.Add(number);
                         line = reader.ReadLine();
                     }

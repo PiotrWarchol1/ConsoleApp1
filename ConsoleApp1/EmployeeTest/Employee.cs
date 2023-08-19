@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    internal class Employee
+    internal class Employee 
     {
         private string v1;
         private string v2;

@@ -1,7 +1,7 @@
 ﻿global using NUnit.Framework;
 namespace ConsoleApp1
 {
-    public class Tests
+    public class Tests 
     {
         [Test]
         public void WhenGetStatisticsCalled_ShouldRReturnCorrectStatisticsMin()

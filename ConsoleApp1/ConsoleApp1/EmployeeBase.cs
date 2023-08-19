@@ -2,7 +2,7 @@
 {
     public abstract class EmployeeBase : IEmployee 
     {
-        public EmployeeBase(string name, string surname)
+        public EmployeeBase(string name, string surname) 
         {
             this.Name = name;
             this.Surname = surname;
