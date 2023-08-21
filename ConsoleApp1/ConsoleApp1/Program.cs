@@ -33,6 +33,6 @@ while (true)
 
 
 var statistics = employee.GetStatistics();
-Console.WriteLine($"Average: {statistics.Average}");
-Console.WriteLine($"Min: {statistics.Min}");
-Console.WriteLine($"Max: {statistics.Max}");
+Console.WriteLine($"Wartość średnia: {statistics.Average}");
+Console.WriteLine($"Wartiść Min: {statistics.Min}");
+Console.WriteLine($"Wartość Max: {statistics.Max}");
